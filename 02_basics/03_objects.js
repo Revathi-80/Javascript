@@ -17,15 +17,15 @@ const JsUser = {
   lastLoginDays: ["monday", "friday"],
 };
 
-console.log(JsUser.email);
-console.log(JsUser["email"]);
-console.log(JsUser["full name"]);
-console.log(JsUser[mySym]);
+// console.log(JsUser.email);
+// console.log(JsUser["email"]);
+// console.log(JsUser["full name"]);
+// console.log(JsUser[mySym]);
 
 JsUser.email = "revathi@gpt.com";
-Object.freeze(JsUser); // further changes on JsUser will not be made
+// Object.freeze(JsUser); // further changes on JsUser will not be made
 JsUser.email = "revathi@microsoft.com";
-console.log(JsUser);
+// console.log(JsUser);
 // {
 //     name: 'revathi',
 //     'full name': 'revathi p',
@@ -35,3 +35,13 @@ console.log(JsUser);
 //     lastLoginDays: [ 'monday', 'friday' ],
 //     [Symbol(key1)]: 'key1'
 //   }
+
+JsUser.greeting = function () {
+  console.log("Hello Js Users");
+};
+JsUser.greetingTwo = function () {
+  console.log(`Hello Js Users ${this.name} `);
+};
+
+// console.log(JsUser.greeting());
+// console.log(JsUser.greetingTwo());
