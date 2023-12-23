@@ -59,10 +59,28 @@ const obj5 = { ...obj1, ...obj2 };
 // ]
 // users[1].email
 
-console.log(tinderUser);
+// console.log(tinderUser);
 
-console.log(Object.keys(tinderUser)); //return type is an array
-console.log(Object.values(tinderUser)); //return type is an array
-console.log(Object.entries(tinderUser)); //return type is an array of array
+// console.log(Object.keys(tinderUser)); //return type is an array
+// console.log(Object.values(tinderUser)); //return type is an array
+// console.log(Object.entries(tinderUser)); //return type is an array of array
 
-console.log(tinderUser.hasOwnProperty("isLoggedIn")); //true
+// console.log(tinderUser.hasOwnProperty("isLoggedIn")); //true
+
+const course = {
+  courseName: "js in hindi",
+  price: "999",
+  courseInstructor: "hitesh",
+};
+
+//object destructring
+const { courseName, price, courseInstructor: instructor } = course;
+// console.log(courseName);
+// console.log(instructor);
+
+//JSON
+// {
+//     "name":'revathi',
+//     "courseName": "JS in Hindi",
+//     "price" : "999"
+// }
